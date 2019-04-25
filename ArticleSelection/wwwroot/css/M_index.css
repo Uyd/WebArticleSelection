@@ -1,0 +1,27 @@
+/* 兼容小设备 */
+.comment {
+    height: 250px;
+}
+.comment>.comment_on {
+    height: 230px;
+}
+
+.comment textarea {
+    height: 170px;
+}
+.comment>.comment_on>form>input {
+    width: 60px;
+    height: 40px;
+    font-size: 16px;
+}
+#comform>span{
+    float: left;
+    margin-left:5px;
+}
+.comment>.comment_on>form>input#submit{
+    width:35%;
+}
+.comment>.comment_on>form>span>label{
+    font-size: 12px;
+    /* float: left; */
+}
