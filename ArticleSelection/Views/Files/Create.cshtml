@@ -1,0 +1,14 @@
+﻿@using LibraryEntity
+@model Files
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@*利用 TagHelper 生成表单*@
+<form method="post">
+    <input asp-for="Title" />
+    <input asp-for="Content"/>
+    <select asp-for="Type" asp-items="Html.GetEnumSelectList<TypeEnum>()"></select>
+    <input asp-for="DateTime" />
+
+    <button type="submit" class="btn btn-submit" name="save">保存</button>
+</form>

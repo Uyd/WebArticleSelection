@@ -1,0 +1,28 @@
+﻿@model IEnumerable<LibraryEntity.Files>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<table class="tab-content">
+    <thead>
+        <tr>
+            <th>序列</th>
+            <th>文件名</th>
+            <th>内容</th>
+            <th>类型</th>
+            <th>时间</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr></tr>
+            <tr>@item.Title</tr>
+            <tr>@item.Content</tr>
+            <tr>@item.Type</tr>
+            <tr>@item.DateTime</tr>
+        }
+    </tbody>
+</table>
+
