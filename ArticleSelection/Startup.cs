@@ -68,6 +68,7 @@ namespace ArticleSelection
             //    });
             #endregion
 
+            //少用的路由访问手段
             //app.Run(async(context)){
             //    var GoHome = Configuration["GoHome"];
             //    await context.Response.WriteAsync(GoHome);

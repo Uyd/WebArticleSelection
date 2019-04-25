@@ -15,6 +15,12 @@ namespace ArticleSelection.Controllers
         //    ViewBag.Value = value;
         //    return View();
         //}
+
+        /// <summary>
+        /// 根据实体传参数
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
         public IActionResult add([FromQuery] MathInput input)
         {
             //验证失败

@@ -9,6 +9,8 @@ namespace ArticleSelection.Models
     public class MathInput
     {
         [Required]
+        public int Uid { get; set; }
+        [Required]
         public int Left { get; set; }
 
         [Required]
