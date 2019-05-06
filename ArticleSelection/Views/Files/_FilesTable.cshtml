@@ -1,0 +1,19 @@
+﻿@model IEnumerable<LibraryEntity.Files>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>序列</th>
+            <th>文件名</th>
+            <th>内容</th>
+            <th>类型</th>
+            <th>时间</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+           <partial name="_FilesRow" for="@item"/>
+        }
+    </tbody>
+</table>

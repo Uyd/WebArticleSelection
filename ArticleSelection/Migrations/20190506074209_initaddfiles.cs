@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace ArticleSelection.Migrations
 {
-    public partial class init : Migration
+    public partial class initaddfiles : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -13,8 +13,9 @@ namespace ArticleSelection.Migrations
                 {
                     ID = table.Column<Guid>(nullable: false),
                     Title = table.Column<string>(nullable: true),
-                    Type = table.Column<string>(nullable: true),
-                    Content = table.Column<string>(nullable: true)
+                    Content = table.Column<string>(nullable: true),
+                    Type = table.Column<int>(nullable: false),
+                    DateTime = table.Column<DateTime>(nullable: false)
                 },
                 constraints: table =>
                 {

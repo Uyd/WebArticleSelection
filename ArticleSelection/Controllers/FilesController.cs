@@ -9,10 +9,14 @@ namespace ArticleSelection.Views.Test
 {
     public class FilesController : Controller
     {
-        private readonly EntityDbContext _context = new EntityDbContext();
+        private readonly EntityDbContext _context;
+        public FilesController(EntityDbContext context)
+        {
+            _context = context;
+        }
         public IActionResult Index()
         {
-            var all = _context.AllFiles.ToList();
+            var all = _context.AllFiles.AsQueryable();
             return View(all);
         }
         public IActionResult Create()
@@ -20,7 +24,7 @@ namespace ArticleSelection.Views.Test
             return View();
         }
         [HttpPost]
-        public IActionResult Delete(Files fl)
+        public IActionResult Create(Files fl)
         {
             var file = new Files
             {
@@ -33,7 +37,7 @@ namespace ArticleSelection.Views.Test
             _context.Add(file);
             _context.SaveChanges();
 
-            return View("Index");
+            return RedirectToAction(nameof(Index));
         }
     }
 }

@@ -52,7 +52,22 @@
         <span class="sr-only">Next</span>
     </a>
 </div>
-
+<div class="row">
+    <div class="col-md-3">
+        <h2>文件</h2>
+        <ul>
+            <li>@Html.ActionLink("查询", "index", "files")</li>
+            <li><a asp-action="create" asp-controller="Files">添加</a></li>
+            <li><a asp-action="add" asp-controller="Math" asp-route-Uid="1">路由加法运算</a></li>
+        </ul>
+        <h2>加密</h2>
+        <ul>
+            <li>@Html.ActionLink("哈希", "Hash", "Algorithm")</li>
+            <li>@Html.ActionLink("对称", "Symmetric", "Algorithm")</li>
+            <li>@Html.ActionLink("非对称", "Asymmetric", "Algorithm")（框架版本有问题,无法使用）</li>
+        </ul>
+    </div>
+</div>
 <div class="row">
     <div class="col-md-3">
         <h2>Application uses</h2>
@@ -92,13 +107,4 @@
         </ul>
     </div>
 </div>
-<div class="row">
-    <div class="col-md-3">
-        <h2>文件</h2>
-        <ul>
-            <li>@Html.ActionLink("查询", "add", "Math")</li>
-            <li><a asp-action="create" asp-controller="Files">添加</a></li>
-            <li><a asp-action="add" asp-controller="Math" asp-route-Uid="1">路由加法运算</a></li>
-        </ul>
-    </div>
-</div>
+

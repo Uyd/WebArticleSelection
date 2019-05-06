@@ -4,25 +4,18 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<table class="tab-content">
-    <thead>
-        <tr>
-            <th>序列</th>
-            <th>文件名</th>
-            <th>内容</th>
-            <th>类型</th>
-            <th>时间</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
-            <tr></tr>
-            <tr>@item.Title</tr>
-            <tr>@item.Content</tr>
-            <tr>@item.Type</tr>
-            <tr>@item.DateTime</tr>
-        }
-    </tbody>
-</table>
+@*部分view视图*@
+@*@Html.Partial("_FilesTable",Model)*@
+<partial name="_FilesTable" for="@Model" />
 
+
+@*@await Component.InvokeAsync("Welcome")*@
+@*自定义taghelper的使用*@
+<vc:welcome></vc:welcome>
+<script>
+    //给表格添加序号
+    var item = document.getElementsByClassName('sn');
+    for (var i = 0; i < item.length; i++) {
+        item[i].innerHTML = i + 1;
+    }
+</script>

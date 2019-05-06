@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ArticleSelection.Migrations
 {
     [DbContext(typeof(EntityDbContext))]
-    [Migration("20190425033527_init")]
-    partial class init
+    [Migration("20190506074209_initaddfiles")]
+    partial class initaddfiles
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -28,9 +28,11 @@ namespace ArticleSelection.Migrations
 
                     b.Property<string>("Content");
 
+                    b.Property<DateTime>("DateTime");
+
                     b.Property<string>("Title");
 
-                    b.Property<string>("Type");
+                    b.Property<int>("Type");
 
                     b.HasKey("ID");
 

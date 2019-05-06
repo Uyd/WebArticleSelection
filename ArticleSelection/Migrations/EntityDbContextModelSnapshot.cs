@@ -26,9 +26,11 @@ namespace ArticleSelection.Migrations
 
                     b.Property<string>("Content");
 
+                    b.Property<DateTime>("DateTime");
+
                     b.Property<string>("Title");
 
-                    b.Property<string>("Type");
+                    b.Property<int>("Type");
 
                     b.HasKey("ID");
 
