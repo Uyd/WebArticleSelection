@@ -9,8 +9,8 @@ namespace ArticleSelection.Views.Test
 {
     public class FilesController : Controller
     {
-        private readonly EntityDbContext _context;
-        public FilesController(EntityDbContext context)
+        private readonly dbContext _context;
+        public FilesController(dbContext context)
         {
             _context = context;
         }

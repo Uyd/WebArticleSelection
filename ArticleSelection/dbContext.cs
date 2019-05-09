@@ -9,12 +9,12 @@ using System.Threading.Tasks;
 
 namespace LibraryEntity
 {
-    public class EntityDbContext:DbContext
+    public class dbContext:DbContext
     {
-        public EntityDbContext(DbContextOptions options) : base(options) { }
+        public dbContext(DbContextOptions options) : base(options) { }
         public DbSet<Files> AllFiles { get; set; }
 
-        public EntityDbContext() { }
+        public dbContext() { }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace ArticleSelection.Migrations
 {
-    [DbContext(typeof(EntityDbContext))]
+    [DbContext(typeof(dbContext))]
     [Migration("20190506074209_initaddfiles")]
     partial class initaddfiles
     {

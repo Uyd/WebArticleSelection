@@ -8,9 +8,9 @@ namespace LibraryEntity
 {
    public enum TypeEnum
     {
-        图片,
-        World,
-        PPT,
-        Text
+        图片=0,
+        World=1,
+        PPT=2,
+        Text=3
     }
 }

@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace ArticleSelection.Migrations
 {
-    [DbContext(typeof(EntityDbContext))]
+    [DbContext(typeof(dbContext))]
     partial class EntityDbContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)

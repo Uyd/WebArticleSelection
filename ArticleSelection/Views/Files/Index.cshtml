@@ -5,11 +5,11 @@
 }
 
 @*部分view视图*@
-@*@Html.Partial("_FilesTable",Model)*@
+@Html.Partial("_FilesTable",Model)
 <partial name="_FilesTable" for="@Model" />
 
 
-@*@await Component.InvokeAsync("Welcome")*@
+@await Component.InvokeAsync("Welcome")
 @*自定义taghelper的使用*@
 <vc:welcome></vc:welcome>
 <script>

@@ -12,8 +12,8 @@ namespace ArticleSelection.ViewComponents
     /// </summary>
     public class WelcomeViewComponent:ViewComponent
     {
-        private readonly EntityDbContext _repository;
-        public WelcomeViewComponent( EntityDbContext repository)
+        private readonly dbContext _repository;
+        public WelcomeViewComponent( dbContext repository)
         {
             _repository = repository;
         }
